@@ -242,6 +242,11 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('/send_push_notification.php', {
           method: 'POST',
           body: JSON.stringify(Object.assign(jsonSubscription, { contentEncoding })),
+        }).then(function (subscription) {
+          return subscription.text()
+        }).then(function (text) {
+          console.log(text)
+          document.getElementById('result').innerText = text;
         });
       })
   );

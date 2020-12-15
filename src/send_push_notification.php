@@ -23,7 +23,11 @@ $webPush = new WebPush($auth);
 
 $report = $webPush->sendOneNotification(
     $subscription,
-    "Hello! 👋"
+    json_encode([
+        'title' => 'notice',
+        'body' => 'Hello! 👋',
+        'icon' => 'https://www.python.org/static/img/python-logo.png'
+    ])
 );
 
 // handle eventual errors here, and remove the subscription from your server if it is expired
