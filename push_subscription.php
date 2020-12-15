@@ -1,6 +1,5 @@
 <?php
 $data = file_get_contents('php://input');
-file_put_contents(__DIR__.'/data.json', $data);
 $subscription = json_decode($data, true);
 
 if (!isset($subscription['endpoint'])) {
