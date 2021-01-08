@@ -13,7 +13,7 @@ self.addEventListener('push', function (event) {
             self.registration.showNotification(title, {
                 data,
                 body: data.body,
-                icon: '/src/launcher-icon.png',
+                icon: '/launcher-icon.png',
                 url: 'https://www.baidu.com'
             })
         );

@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors', 'On');
+ini_set('display_errors', 'Off');
 error_reporting(E_ALL);
 require __DIR__ . '/vendor/autoload.php';
 
@@ -26,7 +26,7 @@ $report = $webPush->sendOneNotification(
     $subscription,
     json_encode([
         'title' => 'notice',
-        'body' => 'Hello! 👋',
+        'body' => '果然是李贺的问题! 👋',
         'icon' => 'https://www.python.org/static/img/python-logo.png'
     ])
 );

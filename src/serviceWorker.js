@@ -11,7 +11,7 @@ self.addEventListener('push', function (event) {
         return self.registration.showNotification(title, {
             data,
             body: data.body,
-            icon: '/src/launcher-icon.png'
+            icon: '/launcher-icon.png'
         })
 
         // return self.registration.showNotification(title, {
